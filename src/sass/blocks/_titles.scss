@@ -1,0 +1,41 @@
+.title {
+    color: $darkblue-color;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 60px;
+    &_fz14 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    &_fz16 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &_fz20 {
+        font-size: 20px;
+        line-height: 23px;
+    }
+    &_fz25 {
+        font-size: 25px;
+        line-height: 25px
+    }
+    &_fz30 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    &_fz56 {
+        font-size: 56px;
+    }
+    &_white {
+        color: white;
+    }
+    &_round {
+        position: relative;
+        padding-left: 10px;
+        z-index: 2;
+        @include round;
+    }
+    span {
+        color: $lightblue-color;
+    }
+}
