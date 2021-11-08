@@ -29,6 +29,12 @@
     &_white {
         color: white;
     }
+    &_darkblue {
+        color: $darkblue-color;
+    }
+    &_bold {
+        font-weight: bold;
+    }
     &_round {
         position: relative;
         padding-left: 10px;

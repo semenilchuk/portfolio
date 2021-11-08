@@ -15,3 +15,7 @@ for (let menuLink of menuLinks )
     menuLink.addEventListener('click', () => {
     menu.classList.remove('active');
 });
+
+$(document).ready(function(){
+    new WOW().init();
+});

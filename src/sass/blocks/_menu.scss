@@ -1,0 +1,105 @@
+.hamburger {
+    height: 22px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    div {
+        height: 3px;
+        background-color: white;
+        width: 30px;
+    }
+    div.long {
+        width: 36px;
+    }
+}
+
+.menu {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    &.active {
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block {
+        position: fixed;
+        width: 350px;
+        height: 100%;
+        padding: 140px 75px 70px;
+        background-color: white;
+        z-index: 10;
+    }
+    &__list {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            position: relative;
+            height: 40px;
+            width: 100%;
+            transition: all 0.4s ease;
+            margin-bottom: 20px;
+            cursor: pointer;
+            a {
+                // font-weight: bold;
+                font-size: 24px;
+                line-height: 30px;
+                color: $darkblue-color;
+                text-decoration: none;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                background-color: $darkblue-color;
+                width: 0;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+            }
+            &:hover {
+                color: red; 
+                text-decoration: none;
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__social {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+    }
+    
+}
