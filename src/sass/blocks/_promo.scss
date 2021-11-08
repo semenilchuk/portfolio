@@ -1,7 +1,8 @@
 .promo {
     min-height: 100vh;
     padding: 50px;
-    background-color: $darkblue-color;
+    // background-color: $darkblue-color;
+    background: linear-gradient(90deg,#1e103e,$darkblue-color);
     position: relative;
     display: flex;
     align-items: center;
